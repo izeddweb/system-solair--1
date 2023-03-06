@@ -21,7 +21,8 @@ body {
 .anim {
   width: 80vw;
   height: 80vh;
-  background-color: #797373;
+  background: center center url(/img/10631-starry-sky-stars-space-dark-astronomy-4k.jpg);
+  background-size: cover;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -59,56 +60,61 @@ body {
   line-height: 100px;
   width: 100px;
   height: 100px;
-  background-image: url(/img/pngwing.com.png);
-  background-position-y: 0;
-  animation: turn-self 3s linear infinite;
-  -webkit-animation: turn-self 3s linear infinite;
-}
-.sun::after {
-  position: absolute;
-  content: "A";
-  width: 10px;
-  height: 10px;
-  top: 0;
-  left: 0;
-  background-color: #e21414;
-
-}
-.mercure {
-  animation: turn infinite 3s ease;
-  -webkit-animation: turn infinite 3s linear;
+  background-image: url(/img/4037758-modified.png);
+  background-position-x:0;
+  animation: turn-self 6s linear infinite;
+  -webkit-animation: turn-self 6s linear infinite;
+  box-shadow: 0 0 100px 20px #f6ee94;
 }
 .venus {
-  animation: turn infinite 5s ease;
+  animation: turn infinite 5s linear;
   -webkit-animation: turn infinite 5s linear;
 }
-.terre {
-  animation: turn infinite 9s  linear;
-  -webkit-animation: turn infinite 9s  linear;
-}
-.mercure::before {
-  content: "m";
-  top: 100px;
-  left: 0;
-  width: 25px;
-  height: 25px;
-  background-color: rgb(242, 241, 240);
-}
 .venus::before {
+  background-position-y: 0;
   content: "v";
   top: 150px;
   left: 0;
   width: 45px;
   height: 45px;
-  background-color: rgb(242, 241, 240);
+  background-image: url(/img/images-modified.png);
+  animation: turn-self 17s linear infinite;
+  -webkit-animation: turn-self 17s linear infinite;
+}
+.mercure {
+  animation: turn infinite 15s  linear;
+  -webkit-animation: turn infinite 15s  linear;
+  transition: all 12s ease-in-out;
+  -webkit-transition: all 12s ease-in-out;
+  -moz-transition: all 12s ease-in-out;
+  -ms-transition: all 12s ease-in-out;
+  -o-transition: all 12s ease-in-out;
+}
+.mercure::before {
+  animation: turn-self 17s linear infinite;
+  -webkit-animation: turn-self 17s linear infinite;
+  content: "m";
+  top: 100px;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  background-image: url(/img/mercure-photo-messenger-modified.png);
+}
+.terre {
+  animation: turn infinite 19s  linear;
+  -webkit-animation: turn infinite 19s  linear;
 }
 .terre::before {
+  background-position-y:0;
   content: "t";
   top: 220px;
   left: 0;
   width: 60px;
   height: 60px;
-  background-color: rgb(242, 241, 240);
+  background: center center url(/img/istockphoto-182058785-612x612.jpg);
+  background-size: cover;
+  animation: turn-self infinite linear 14s;
+  -webkit-animation: turn-self infinite linear 14s;
 }
 @keyframes turn {
   0% {
@@ -128,13 +134,9 @@ body {
 }
 @keyframes turn-self {
   0% {
-    /* transform: rotateZ(0deg) ; */
     background-position-y: 0;
-   
 }
   100% {
-    /* transform: rotateZ(360deg); */
-    background-position-y: -360;
-
+    background-position-y: -360px;
   }
 }
