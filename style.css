@@ -6,7 +6,7 @@
 }
 body {
   background-color: #fff;
-  perspective: 1800px;
+  perspective: 800px;
 }
 .container {
   width: 80%;
@@ -28,6 +28,13 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+  perspective: 3d;
+  perspective:500px;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
 }
 .anim .planet {
   position: absolute;
@@ -44,6 +51,7 @@ body {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   perspective: 3d;
+  cursor: pointer;
 }
 .mercure::before,
 .venus::before,
@@ -140,3 +148,49 @@ body {
     background-position-y: -360px;
   }
 }
+/* star modal-info */
+.modal{
+  perspective: 300px;
+  background-color: #646060;
+  width:300px ;
+  height: 80vh;;
+  transform: rotateY(90deg);
+  transform-origin: 100% ;
+  -webkit-transform: rotateY(90deg);
+  -moz-transform: rotateY(90deg);
+  -ms-transform: rotateY(90deg);
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  -o-transform: rotateY(90deg);
+  display: none;
+
+}
+/* end modal-info */
+
+
+/*    dynamic class */
+.show{
+  transform: rotateY(0deg);
+  transform-origin: 100% 0;
+  display: block;
+}
+.translate{
+  transform: rotateY(0deg);
+  transform-origin:0 100% ;
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+}
+
+
+
+
+
+
+
+
+
