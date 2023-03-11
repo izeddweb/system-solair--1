@@ -6,20 +6,27 @@
 }
 body {
   background-color: #fff;
-  perspective: 800px;
 }
 .container {
   width: 80%;
   height: 90vh;
+  padding: 0 20px;
   margin: auto;
   background-color: #494343;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  /* gap: 10px; */
+  transition: all 2s;
+  -webkit-transition: all 2s;
+  -moz-transition: all 2s;
+  -ms-transition: all 2s;
+  -o-transition: all 2s;
+  perspective: 400px;
+  overflow: hidden;
 }
 .anim {
-  width: 80vw;
+  width: 100vw;
   height: 80vh;
   background: center center url(/img/10631-starry-sky-stars-space-dark-astronomy-4k.jpg);
   background-size: cover;
@@ -28,13 +35,12 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  perspective: 3d;
-  perspective:500px;
-  transition: 1s;
-  -webkit-transition: 1s;
-  -moz-transition: 1s;
-  -ms-transition: 1s;
-  -o-transition: 1s;
+  transition: all 2s;
+  -webkit-transition: all 2s;
+  -moz-transition: all 2s;
+  -ms-transition: all 2s;
+  -o-transition: all 2s;
+  transform-origin:left ;
 }
 .anim .planet {
   position: absolute;
@@ -50,7 +56,6 @@ body {
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
-  perspective: 3d;
   cursor: pointer;
 }
 .mercure::before,
@@ -150,40 +155,47 @@ body {
 }
 /* star modal-info */
 .modal{
-  perspective: 300px;
-  background-color: #646060;
-  width:300px ;
-  height: 80vh;;
-  transform: rotateY(90deg);
-  transform-origin: 100% ;
-  -webkit-transform: rotateY(90deg);
-  -moz-transform: rotateY(90deg);
-  -ms-transform: rotateY(90deg);
-  transition: 1s;
-  -webkit-transition: 1s;
-  -moz-transition: 1s;
-  -ms-transition: 1s;
-  -o-transition: 1s;
-  -o-transform: rotateY(90deg);
-  display: none;
-
+  background-image: url(/img/4037758-modified.png);
+  width:0;
+  height: 80vh;
+  transform: rotateY(-135deg);
+  -webkit-transform: rotateY(-135deg);
+  -moz-transform: rotateY(-135deg);
+  -ms-transform: rotateY(-135deg);
+  -o-transform: rotateY(-135deg);
+  transition: all 2s;
+  -webkit-transition: all 2s;
+  -moz-transition: all 2s;
+  -ms-transition: all 2s;
+  -o-transition: all 2s;
+  transform-origin: 100% -30%;
+  overflow: hidden;
 }
 /* end modal-info */
 
 
 /*    dynamic class */
 .show{
-  transform: rotateY(0deg);
-  transform-origin: 100% 0;
-  display: block;
+  transition: all 2s;
+  -webkit-transition: all 2s;
+  -moz-transition: all 2s;
+  -ms-transition: all 2s;
+  -o-transition: all 2s;
+  transform: rotateY(-30deg);
+  -webkit-transform: rotateY(-30deg);
+  -moz-transform: rotateY(-30deg);
+  -ms-transform: rotateY(-30deg);
+  -o-transform: rotateY(-30deg);
+  width:300px;
 }
 .translate{
-  transform: rotateY(0deg);
-  transform-origin:0 100% ;
-  -webkit-transform: rotateY(0deg);
-  -moz-transform: rotateY(0deg);
-  -ms-transform: rotateY(0deg);
-  -o-transform: rotateY(0deg);
+  transform: rotateY(5deg);
+  -webkit-transform: rotateY(5deg);
+  -moz-transform: rotateY(5deg);
+  -ms-transform: rotateY(5deg);
+  -o-transform: rotateY(5deg);
+  transform-origin:left;
+  
 }
 
 

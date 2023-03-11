@@ -6,8 +6,8 @@ console.log(anim);
 // set function
 
 planetSun.onclick = function () {
-  modal.classList.add('show');
-  anim.classList.add('translate');
+  modal.classList.toggle('show')
+  anim.classList.toggle('translate');
 }
 
 
